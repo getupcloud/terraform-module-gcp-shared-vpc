@@ -1,13 +1,12 @@
 terraform {
   required_providers {
-    #kubectl = {
-    #  source  = "gavinbunney/kubectl"
-    #  version = "~> 1"
-    #}
-
     shell = {
       source  = "scottwinkler/shell"
       version = "~> 1"
     }
   }
+}
+provider "google" {
+  project = "example-gcp-project"
+  region  = "us-east1"
 }
