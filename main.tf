@@ -9,13 +9,13 @@ module "vpc" {
     )
   }
 
-  project_id      = each.value.project_id
-  network_name    = each.value.network_name
-  subnets         = each.value.subnets
-  routes          = each.value.routes
-  routing_mode    = each.value.routing_mode
-  shared_vpc_host = each.value.shared_vpc_host
-
+  project_id       = each.value.project_id
+  network_name     = each.value.network_name
+  subnets          = each.value.subnets
+  secondary_ranges = each.value.secondary_ranges
+  routes           = each.value.routes
+  routing_mode     = each.value.routing_mode
+  shared_vpc_host  = each.value.shared_vpc_host
 }
 
 module "firewall_rules" {
